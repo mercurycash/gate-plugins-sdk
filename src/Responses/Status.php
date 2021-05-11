@@ -54,7 +54,7 @@ class Status implements ResponseInterface
     /**
      * @var int
      */
-    protected $сonfirmations = 0;
+    protected $confirmations = 0;
 
 
     /**
