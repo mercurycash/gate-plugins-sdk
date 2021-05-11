@@ -52,6 +52,12 @@ class Status implements ResponseInterface
     protected $status = null;
 
     /**
+     * @var int
+     */
+    protected $confirmations = 0;
+
+
+    /**
      * @return string
      */
     public function getUuid(): string
@@ -204,4 +210,24 @@ class Status implements ResponseInterface
         
         return $this;
     }
+
+    /**
+     * @return int
+     */
+    public function getConfirmations(): int
+    {
+        return ($this->сonfirmations) ? $this->сonfirmations : 0;
+    }
+
+    /**
+     * @param int $сonfirmations
+     * @return Status
+     */
+    public function setConfirmations($сonfirmations): Status
+    {
+        $this->сonfirmations = ($сonfirmations) ? $сonfirmations : 0;
+
+        return $this;
+    }
+
 }
